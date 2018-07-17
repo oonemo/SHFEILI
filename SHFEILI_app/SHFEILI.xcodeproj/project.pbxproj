@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60577E1920FDD1BE00987326 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60577E1820FDD1BE00987326 /* ReportViewController.swift */; };
+		60577E1B20FDD6A100987326 /* MonitorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60577E1A20FDD6A100987326 /* MonitorViewController.swift */; };
 		A6C1119FFB665AFBFA1B216A /* Pods_SHFEILI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75870D50517C8A760BBDBFEE /* Pods_SHFEILI.framework */; };
-		BA42B91320F5C67600D9FC24 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA42B91220F5C67600D9FC24 /* ReportViewController.swift */; };
 		BAF605CB20F5B57D00127CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF605CA20F5B57D00127CC6 /* AppDelegate.swift */; };
 		BAF605CD20F5B57D00127CC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF605CC20F5B57D00127CC6 /* ViewController.swift */; };
 		BAF605D020F5B57D00127CC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAF605CE20F5B57D00127CC6 /* Main.storyboard */; };
@@ -37,10 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		60577E1820FDD1BE00987326 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		60577E1A20FDD6A100987326 /* MonitorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorViewController.swift; sourceTree = "<group>"; };
 		65CDDE522D393ECF5508FD4C /* Pods-SHFEILI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHFEILI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHFEILI/Pods-SHFEILI.debug.xcconfig"; sourceTree = "<group>"; };
 		75870D50517C8A760BBDBFEE /* Pods_SHFEILI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHFEILI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76588F61C6FCF4E7932E0C73 /* Pods-SHFEILI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHFEILI.release.xcconfig"; path = "Pods/Target Support Files/Pods-SHFEILI/Pods-SHFEILI.release.xcconfig"; sourceTree = "<group>"; };
-		BA42B91220F5C67600D9FC24 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		BAF605C720F5B57D00127CC6 /* SHFEILI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHFEILI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF605CA20F5B57D00127CC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAF605CC20F5B57D00127CC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -124,7 +126,8 @@
 				BAF605D320F5B57D00127CC6 /* LaunchScreen.storyboard */,
 				BAF605D620F5B57D00127CC6 /* Info.plist */,
 				BAF605F820F5BC9400127CC6 /* progressBar.xib */,
-				BA42B91220F5C67600D9FC24 /* ReportViewController.swift */,
+				60577E1820FDD1BE00987326 /* ReportViewController.swift */,
+				60577E1A20FDD6A100987326 /* MonitorViewController.swift */,
 			);
 			path = SHFEILI;
 			sourceTree = "<group>";
@@ -332,8 +335,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAF605CD20F5B57D00127CC6 /* ViewController.swift in Sources */,
+				60577E1B20FDD6A100987326 /* MonitorViewController.swift in Sources */,
 				BAF605CB20F5B57D00127CC6 /* AppDelegate.swift in Sources */,
-				BA42B91320F5C67600D9FC24 /* ReportViewController.swift in Sources */,
+				60577E1920FDD1BE00987326 /* ReportViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

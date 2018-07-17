@@ -1,5 +1,5 @@
 //
-//  ReportViewController.swift
+//  MonitorViewController.swift
 //  SHFEILI
 //
 //  Created by Michael Hu on 7/17/18.
@@ -8,16 +8,15 @@
 
 import UIKit
 
-class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-    
-    let list = ["report 1", "report 2", "report 3"]
+class MonitorViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    let list = ["machine 1", "machine 2", "machine 3"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return list.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "machine")
         cell.textLabel?.text = list[indexPath.row]
         return cell
     }
@@ -33,6 +32,8 @@ class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
 
     /*
