@@ -1,0 +1,8 @@
+.DS_Store
+cookies.txt
+env/
+.idea/
+*.egg-info/
+*.pyc
+venv/
+CONFIG
