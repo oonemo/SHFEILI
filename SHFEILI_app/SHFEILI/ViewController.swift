@@ -11,6 +11,8 @@ import UICircularProgressRing
 
 class ViewController: UIViewController {
     
+    var working = false
+    
     @IBOutlet weak var progressBar: UICircularProgressRing!
 
     override func viewDidLoad() {
@@ -26,11 +28,25 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        progressBar.startProgress(to: 100, duration: 20.0)
+        let isUserLoggedIn = UserDefaults.standard.bool(forKey: "isUserLoggedIn");
+        if (!isUserLoggedIn && !working) {
+            performSegue(withIdentifier: "showLogin", sender: self)
+        } else {
+            progressBar.startProgress(to: 100, duration: 20.0)
+            working = true
+        }
     }
     
     @IBAction func stopProgress(_ sender: Any) {
-        progressBar.pauseProgress()
+        if (working) {
+            progressBar.pauseProgress()
+            working = false
+        }
+        else {
+            progressBar.continueProgress()
+            working = true
+        }
+        
     }
     
 }
