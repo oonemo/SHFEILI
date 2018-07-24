@@ -9,6 +9,8 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    
     let username = "shfeili"
     let password = "password"
 
@@ -30,39 +32,39 @@ class LoginViewController: UIViewController {
     @IBAction func userLogin(_ sender: Any) {
         let inputUsername = inputUsernameTextField.text;
         let inputPassword = inputPasswordTextField.text;
+        
+        let endpoint = "http://localhost:8000/api/login/"
+        
+//        var data = NSMutableDictionary()
+//        data["username"] = "shfeili"
+//        data["password"] = "password"
+        
+        NetworkUtils.post(endpoint: endpoint, inputData:["username": inputUsername, "password": inputPassword]) {
             
-        if ((inputPassword!.isEmpty) || (inputUsername!.isEmpty)) {
-            displayMessage(title:"Alert", userMessage: "All Fields Must be entered!", handler: nil);
-            return;
-        }
-            
-        if (inputUsername != "shfeili") {
-            displayMessage(title:"Alert", userMessage: "User do not exist!", handler: nil);
-            return;
-        } else {
-            if (inputPassword != "password") {
-                displayMessage(title:"Alert", userMessage: "Wrong password!", handler: nil);
-                return;
+        (result) in
+            let succeed = result!["is_user"] as! Bool
+            if (!succeed) {
+                self.displayMessage(title: "Error", userMessage: "Login Failed.", view: self,  handler: nil)
+            } else {
+                self.displayMessage(title:"Succeed", userMessage: "Login succeeded!", view: self) {
+                    action in self.dismiss(animated: true, completion: nil);
+                }
+                UserDefaults.standard.set(true, forKey: "isUserLoggedIn");
+                UserDefaults.standard.synchronize();
             }
         }
-            
-        displayMessage(title:"Succeed", userMessage: "Login succeeded!") {
-            action in self.dismiss(animated: true, completion: nil);
-        }
-        
-        UserDefaults.standard.set(true, forKey: "isUserLoggedIn");
-        UserDefaults.standard.synchronize();
-        
+
     }
     
-    func displayMessage(title: String, userMessage:String, handler:((UIAlertAction) -> Void)?) {
+    func displayMessage(title: String, userMessage:String, view: UIViewController, handler:((UIAlertAction) -> Void)?) {
 
+        
         let myAlert = UIAlertController(title:title, message:userMessage, preferredStyle: .alert)
         let okAction = UIAlertAction(title:"Ok", style:UIAlertActionStyle.default, handler:handler);
 
         myAlert.addAction(okAction);
 
-        self.present(myAlert, animated: true, completion: nil);
+        view.present(myAlert, animated: true, completion: nil);
     }
 
     /*

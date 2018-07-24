@@ -10,7 +10,7 @@ import UIKit
 
 class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-    let list = ["report 1", "report 2", "report 3"]
+    let list: [String] = []
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return list.count
@@ -27,6 +27,12 @@ class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        NetworkUtils.get(endpoint: "http://localhost/api/reports", completionHandler: nil)
+        
     }
 
     override func didReceiveMemoryWarning() {

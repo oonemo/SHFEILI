@@ -3,7 +3,7 @@ from backend import util
 import flask
 import backend
 from backend.util import check_password, create_password
-
+import json
 
 @backend.app.route('/api/create_user/', methods=["POST", "GET"])
 def create_user():
@@ -12,10 +12,11 @@ def create_user():
         util.aborting("403", "Forbidden")
 
     if request.method == 'POST':
-        password = request.form['password']
-        username = request.form['username']
-        new_password = request.form['create_password']
-        new_username = request.form['new_username']
+        data = json.loads(request.get_data().decode('utf-8'))
+        password = data['password']
+        username = data['username']
+        new_password = data['create_password']
+        new_username = data['new_username']
         is_power = check_password(password, username)[1]
         power = request.form['user_type'] == 'power'
         if is_power:
@@ -41,8 +42,9 @@ def login():
     if request.method == 'POST':
         if 'username' in session:
             util.aborting("403", "Forbidden")
-        username = request.form['username']
-        password = request.form['password']
+        data = json.loads(request.get_data().decode('utf-8'))
+        username = data['username']
+        password = data['password']
 
         is_user, is_power = check_password(password, username)
         if is_user:
