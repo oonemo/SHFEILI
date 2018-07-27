@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
         let inputUsername = inputUsernameTextField.text;
         let inputPassword = inputPasswordTextField.text;
         
-        let endpoint = "http://localhost:8000/api/login/"
+        let endpoint = "http://10.167.165.158:8000/api/login/"
         
 //        var data = NSMutableDictionary()
 //        data["username"] = "shfeili"

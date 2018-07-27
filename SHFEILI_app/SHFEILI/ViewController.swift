@@ -18,6 +18,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        progressBar.startProgress(to: 100, duration: 100.0)
         progressBar.maxValue = 100
         progressBar.innerRingColor = UIColor.blue
         // Do any additional setup after loading the view, typically from a nib.
@@ -33,7 +34,6 @@ class ViewController: UIViewController {
         if (!isUserLoggedIn && !working) {
             performSegue(withIdentifier: "showLogin", sender: self)
         } else {
-            progressBar.startProgress(to: 100, duration: 20.0)
             working = true
         }
     }

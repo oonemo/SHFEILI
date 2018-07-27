@@ -27,7 +27,7 @@ class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkUtils.get(endpoint: "http://localhost:8000/api/reports/") {
+        NetworkUtils.get(endpoint: "http://10.167.165.158:8000/api/reports/") {
             (dictionary) in
             if (dictionary == nil) {
                 print("Receive empty dictionary")
