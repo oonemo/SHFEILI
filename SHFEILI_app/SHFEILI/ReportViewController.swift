@@ -24,10 +24,30 @@ class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
     }
     
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let endPoint = list[indexPath.row].replacingOccurrences(of: "report ", with: "")
+//        NetworkUtils.get(endPoint) {
+//            (dictionary) in
+//            if (dictionary == nil) {
+//                print("Receive empty dictionary")
+//            }
+//            
+//            if let reportlist = dictionary!["reportsList"] as? [String] {
+//                print(reportlist)
+//                self.list = reportlist
+//            }
+//            
+//            let viewController = storyboard?.instantiateViewController(withIdentifier: "machineDetail") as! MachineDetailViewController
+//            
+//            self.navigationController?.pushViewController(viewController, animated: true)
+//            
+//        }
+//    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkUtils.get(endpoint: "http://10.167.165.158:8000/api/reports/") {
+        NetworkUtils.get(endpoint: "/api/reports/") {
             (dictionary) in
             if (dictionary == nil) {
                 print("Receive empty dictionary")

@@ -9,10 +9,29 @@
 import UIKit
 
 class MachineDetailViewController: UIViewController {
-
+    
+    var dataDict =  NSDictionary()
+    
+    var modelText: String = ""
+    var totalTestedText: String = ""
+    var errorCountText: String = ""
+    var statusText: String = ""
+    
+    @IBOutlet weak var model: UITextField!
+    @IBOutlet weak var totalTested: UITextField!
+    @IBOutlet weak var errorCount: UITextField!
+    @IBOutlet weak var status: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        model.text = modelText
+        totalTested.text = totalTestedText
+        errorCount.text = errorCountText
+        status.text = statusText
+        if (status.text == "Error") {
+            status.textColor = UIColor.red
+        }
         // Do any additional setup after loading the view.
     }
 

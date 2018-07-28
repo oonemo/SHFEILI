@@ -12,7 +12,7 @@ open class NetworkUtils {
     static let serverBaseUrl = "http://localhost:8000"
     
     static func get(endpoint: String, completionHandler: ((NSDictionary?) -> Void)? = nil) {
-        guard let url = URL(string: endpoint) else {
+        guard let url = URL(string: (serverBaseUrl + endpoint)) else {
             print("Error: cannot creaet URL!")
             return
         }
@@ -50,7 +50,7 @@ open class NetworkUtils {
     }
     
     static func post(endpoint: String, inputData: [String: Any], completionHandler: ((NSDictionary?) -> Void)? = nil) {
-        guard let url = URL(string: endpoint) else {
+        guard let url = URL(string: (serverBaseUrl + endpoint)) else {
             print("Error: cannot creaet URL!")
             return;
         }

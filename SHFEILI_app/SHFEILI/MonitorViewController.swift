@@ -9,29 +9,67 @@
 import UIKit
 
 class MonitorViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    let list = ["machine 1", "machine 2", "machine 3"]
-    let identities = ["m1", "m2", "m3"]
+    var data = NSDictionary()
+    var machineStatus = NSDictionary()
+    
+    @IBOutlet weak var tableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.count
+        
+        if let working = data["working"] as? Bool {
+            if (working) {
+                self.machineStatus = data["machineStatus"] as! NSDictionary
+                return machineStatus.count
+            } else {
+                return 0;
+            }
+        } else{
+            print("data emptty!")
+            return 0;
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "machine")
-        cell.textLabel?.text = list[indexPath.row]
+        cell.textLabel?.text =  "machine \(indexPath.row)"
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vcName = identities[indexPath.row]
-        let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
-        self.navigationController?.pushViewController(viewController!, animated: true)
+        let str = machineStatus["\(indexPath.row)"] as! String
+        let dictStr = str.replacingOccurrences(of: "'", with: "\"")
+        let jsonData = dictStr.data(using: .utf8)
+        let dict = try? JSONSerialization.jsonObject(with: jsonData!, options: .mutableLeaves) as! NSDictionary
+        let viewController = storyboard?.instantiateViewController(withIdentifier: "machineDetail") as! MachineDetailViewController
+        
+        let errorCount = dict!["numError"] as! Int
+        let totalTestedText = data["totalTested"] as! String
+        let statusText = dict!["status"] as! String
+        let modelText = dict!["model"] as! String
+        
+        print(errorCount)
+        print(totalTestedText)
+        
+        viewController.errorCountText = "\(errorCount)"
+        viewController.totalTestedText = "\(totalTestedText)"
+        viewController.statusText = "\(statusText)"
+        viewController.modelText = "\(modelText)"
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        NetworkUtils.get(endpoint: "/api/system_status/") {
+            (dictionary) in
+            if (dictionary == nil) {
+                print("Receive empty dictionary")
+            }
+            
+            self.data = dictionary!
+            self.tableView.reloadData()
+            print(dictionary)
+        }
         // Do any additional setup after loading the view.
     }
 

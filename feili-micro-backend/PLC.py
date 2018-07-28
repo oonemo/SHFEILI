@@ -28,7 +28,7 @@ def working_and_generate():
         count += 1
         time.sleep(0.1)
         for i in range(10):
-            if random.randint(0, 2000) == 1:
+            if random.randint(0, 200) == 1:
                 machineStatus[i]['numError'] += random.randint(0, 1)
             if machineStatus[i]['numError'] != 0:
                 machineStatus[i]['status'] = 'Error'
