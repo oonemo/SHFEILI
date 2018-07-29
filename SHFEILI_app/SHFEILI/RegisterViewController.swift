@@ -10,8 +10,6 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     
-    
-    
     @IBOutlet weak var oldUsername: UITextField!
     @IBOutlet weak var oldPassword: UITextField!
     @IBOutlet weak var newUsername: UITextField!

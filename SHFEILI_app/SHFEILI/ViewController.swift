@@ -12,15 +12,14 @@ import UICircularProgressRing
 
 class ViewController: UIViewController {
     
-    var working = false
     
-    @IBOutlet weak var progressBar: UICircularProgressRing!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        progressBar.startProgress(to: 100, duration: 100.0)
-        progressBar.maxValue = 100
-        progressBar.innerRingColor = UIColor.blue
+        let isUserLoggedIn = UserDefaults.standard.bool(forKey: "isUserLoggedIn");
+        if (!isUserLoggedIn) {
+            performSegue(withIdentifier: "showLogin", sender: self)
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -30,24 +29,19 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let isUserLoggedIn = UserDefaults.standard.bool(forKey: "isUserLoggedIn");
-        if (!isUserLoggedIn && !working) {
-            performSegue(withIdentifier: "showLogin", sender: self)
-        } else {
-            working = true
-        }
+
     }
     
     @IBAction func stopProgress(_ sender: Any) {
-        if (working) {
-            progressBar.pauseProgress()
-            working = false
-        }
-        else {
-            progressBar.continueProgress()
-            working = true
-        }
         
+    }
+    
+    @IBAction func logout(_ sender: Any) {
+        NetworkUtils.deleteAllCookies()
+        let domain = Bundle.main.bundleIdentifier!;
+        UserDefaults.standard.removePersistentDomain(forName: domain);
+        UserDefaults.standard.synchronize();
+        performSegue(withIdentifier: "showLogin", sender: self)
     }
     
 }

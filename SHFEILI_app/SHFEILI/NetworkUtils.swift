@@ -133,6 +133,16 @@ open class NetworkUtils {
         }
     }
     
+    static func deleteAllCookies() {
+        let cookie = HTTPCookie.self
+        let cookieJar = HTTPCookieStorage.shared
+        
+        for cookie in cookieJar.cookies! {
+            // print(cookie.name+"="+cookie.value)
+            cookieJar.deleteCookie(cookie)
+        }
+    }
+    
     static func jsonDecodeString(string: String, flag: Bool) -> NSDictionary? {
         var dictStr = string
         if (flag) {

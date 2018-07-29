@@ -247,6 +247,11 @@
 					BAF605C620F5B57D00127CC6 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					BAF605DA20F5B57D00127CC6 = {
 						CreatedOnToolsVersion = 9.2;

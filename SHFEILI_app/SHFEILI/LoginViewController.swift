@@ -48,6 +48,7 @@ class LoginViewController: UIViewController {
                     action in self.dismiss(animated: true, completion: nil);
                 }
                 UserDefaults.standard.set(true, forKey: "isUserLoggedIn");
+                NetworkUtils.storeCookies()
                 UserDefaults.standard.synchronize();
             }
         }
