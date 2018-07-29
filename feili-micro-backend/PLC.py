@@ -40,9 +40,10 @@ def working_and_generate():
     report = dict()
     report['totalTested'] = count
     report['totalScheduled'] = 1000
-    report['machineStatus'] = machineStatus
-    red.rpush('reportsList', 'report ' + arrow.now().format('YYYY-MM-DD HH:mm:ss'))
-    red.hmset('report ' + arrow.now().format('YYYY-MM-DD HH:mm:ss'), report) # could be trimmed
+    timeStamp = arrow.now().format('YYYY-MM-DD HH:mm:ss')
+    red.rpush('reportsList', 'report ' + timeStamp)
+    red.hmset('report ' + timeStamp, report) # could be trimmed
+    red.hmset('machineStatus ' + timeStamp, machineStatus)
 
 
 t1 = threading.Thread(target=working_and_generate())

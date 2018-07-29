@@ -24,25 +24,32 @@ class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let endPoint = list[indexPath.row].replacingOccurrences(of: "report ", with: "")
-//        NetworkUtils.get(endPoint) {
-//            (dictionary) in
-//            if (dictionary == nil) {
-//                print("Receive empty dictionary")
-//            }
-//            
-//            if let reportlist = dictionary!["reportsList"] as? [String] {
-//                print(reportlist)
-//                self.list = reportlist
-//            }
-//            
-//            let viewController = storyboard?.instantiateViewController(withIdentifier: "machineDetail") as! MachineDetailViewController
-//            
-//            self.navigationController?.pushViewController(viewController, animated: true)
-//            
-//        }
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var str = list[indexPath.row].replacingOccurrences(of: "report ", with: "")
+        str = "/api/reports/" + str + "/"
+        let endPoint = str.replacingOccurrences(of: " ", with: "%20")
+        NetworkUtils.get(endpoint: endPoint) {
+            (dictionary) in
+            if (dictionary == nil) {
+                print("Receive empty dictionary")
+                return;
+            }
+            print(dictionary)
+//            let str = dictionary!["machineStatus"] as! String
+//            let tempdict = NetworkUtils.jsonDecodeString(string: str, flag: false)
+//            print(tempdict)
+            if let machineStatus = dictionary!["machineStatus"] as? NSDictionary {
+                print(machineStatus)
+                let viewController = self.storyboard?.instantiateViewController(withIdentifier: "reportDetail") as! ReportDetailViewController
+                viewController.totalTested = dictionary?["totalTested"] as! String
+                viewController.totalScheduled = dictionary?["totalScheduled"] as! String
+                viewController.timeStamp = endPoint
+                viewController.machineDetailDict = machineStatus
+                self.navigationController?.pushViewController(viewController, animated: true)
+            }
+            
+        }
+    }
     
 
     override func viewDidLoad() {

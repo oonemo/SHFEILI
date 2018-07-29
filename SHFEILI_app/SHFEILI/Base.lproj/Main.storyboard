@@ -167,16 +167,16 @@
             </objects>
             <point key="canvasLocation" x="2564" y="134"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Report Detail View Controller-->
         <scene sceneID="3hF-Qr-jgF">
             <objects>
-                <tableViewController id="PFG-FW-WJR" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="reportDetail" id="PFG-FW-WJR" customClass="ReportDetailViewController" customModule="SHFEILI" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ut7-8t-Ql6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="JOa-oD-gV9">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reportCell" id="JOa-oD-gV9">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JOa-oD-gV9" id="b6r-Ls-K2D">
@@ -193,7 +193,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JyU-Ro-nir" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3110" y="134"/>
+            <point key="canvasLocation" x="3228" y="134"/>
         </scene>
         <!--Monitor-->
         <scene sceneID="QM2-4B-fSc">

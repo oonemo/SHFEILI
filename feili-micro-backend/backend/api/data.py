@@ -11,7 +11,7 @@ def get_report_data(timestamp):
     # context contains:
     #   totalTested (Int): total # tested
     #   totalScheduled (Int): total # scheduled
-    #   machinesStatus (Dict): {machineNo: (Int) : {model: (String), numError: (Int),
+    #   machineStatus (Dict): {machineNo: (Int) : {model: (String), numError: (Int),
     #                           status: (String)}}
 
     if "username" not in flask.session:
@@ -21,8 +21,11 @@ def get_report_data(timestamp):
     red = util.get_redis()
     if request.method == 'GET':
         report_name = 'report ' + timestamp
+        machine_name = 'machineStatus ' + timestamp
         if red.exists(report_name):
             context = red.hgetall(report_name)
+            machineStatus = red.hgetall(machine_name)
+            context['machineStatus'] = machineStatus
     return flask.jsonify(**context)
 
 
@@ -51,8 +54,7 @@ def get_status():
     # This function is used to send the machine status for testbed
     # context contains:
     #   working (Bool)
-    #   machinesStatus (Dict): {machineNo: (Int) : {model: (String), numHit: (Int), status: (String),
-    #                           hitStamp: (List): {(Int)}}}
+    #   machinesStatus (Dict): {machineNo: (Int) : {model: (String), numHit: (Int), status: (String)}}
     #   totalTested (Int): total # tested
     #   totalScheduled (Int): total # scheduled
 

@@ -133,4 +133,14 @@ open class NetworkUtils {
         }
     }
     
+    static func jsonDecodeString(string: String, flag: Bool) -> NSDictionary? {
+        var dictStr = string
+        if (flag) {
+            dictStr = string.replacingOccurrences(of: "'", with: "\"")
+        }
+        let jsonData = dictStr.data(using: .utf8)
+        let dict = try? JSONSerialization.jsonObject(with: jsonData!, options: .mutableLeaves) as! NSDictionary
+        return dict
+    }
+    
 }
