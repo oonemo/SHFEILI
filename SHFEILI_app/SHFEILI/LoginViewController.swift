@@ -11,8 +11,6 @@ import UIKit
 class LoginViewController: UIViewController {
     
     
-    let username = "shfeili"
-    let password = "password"
 
     @IBOutlet weak var inputUsernameTextField: UITextField!
     @IBOutlet weak var inputPasswordTextField: UITextField!
@@ -44,9 +42,9 @@ class LoginViewController: UIViewController {
         (result) in
             let succeed = result!["is_user"] as! Bool
             if (!succeed) {
-                self.displayMessage(title: "Error", userMessage: "Login Failed.", view: self,  handler: nil)
+                Utils.displayMessage(title: "Error", userMessage: "Login Failed.", view: self,  handler: nil)
             } else {
-                self.displayMessage(title:"Succeed", userMessage: "Login succeeded!", view: self) {
+                Utils.displayMessage(title:"Succeed", userMessage: "Login succeeded!", view: self) {
                     action in self.dismiss(animated: true, completion: nil);
                 }
                 UserDefaults.standard.set(true, forKey: "isUserLoggedIn");
@@ -56,16 +54,6 @@ class LoginViewController: UIViewController {
 
     }
     
-    func displayMessage(title: String, userMessage:String, view: UIViewController, handler:((UIAlertAction) -> Void)?) {
-
-        
-        let myAlert = UIAlertController(title:title, message:userMessage, preferredStyle: .alert)
-        let okAction = UIAlertAction(title:"Ok", style:UIAlertActionStyle.default, handler:handler);
-
-        myAlert.addAction(okAction);
-
-        view.present(myAlert, animated: true, completion: nil);
-    }
 
     /*
     // MARK: - Navigation

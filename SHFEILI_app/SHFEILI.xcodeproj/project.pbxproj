@@ -10,6 +10,8 @@
 		601A692521049A860006824C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601A692421049A860006824C /* LoginViewController.swift */; };
 		60577E1920FDD1BE00987326 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60577E1820FDD1BE00987326 /* ReportViewController.swift */; };
 		60577E1B20FDD6A100987326 /* MonitorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60577E1A20FDD6A100987326 /* MonitorViewController.swift */; };
+		606BC3C8210DABC20024E1D3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606BC3C7210DABC20024E1D3 /* RegisterViewController.swift */; };
+		606BC3CA210DACB30024E1D3 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606BC3C9210DACB30024E1D3 /* Utils.swift */; };
 		6088970B210CD47A004C59F0 /* ReportDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6088970A210CD47A004C59F0 /* ReportDetailViewController.swift */; };
 		609765B12104F16E007E0B99 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609765B02104F16E007E0B99 /* NetworkUtils.swift */; };
 		60AF88E52108784000FC5C0B /* MachineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60AF88E42108784000FC5C0B /* MachineDetailViewController.swift */; };
@@ -45,6 +47,8 @@
 		601A692421049A860006824C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		60577E1820FDD1BE00987326 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		60577E1A20FDD6A100987326 /* MonitorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorViewController.swift; sourceTree = "<group>"; };
+		606BC3C7210DABC20024E1D3 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		606BC3C9210DACB30024E1D3 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		6088970A210CD47A004C59F0 /* ReportDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportDetailViewController.swift; sourceTree = "<group>"; };
 		609765B02104F16E007E0B99 /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
 		60AF88E42108784000FC5C0B /* MachineDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDetailViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +144,8 @@
 				609765B02104F16E007E0B99 /* NetworkUtils.swift */,
 				60AF88E42108784000FC5C0B /* MachineDetailViewController.swift */,
 				6088970A210CD47A004C59F0 /* ReportDetailViewController.swift */,
+				606BC3C7210DABC20024E1D3 /* RegisterViewController.swift */,
+				606BC3C9210DACB30024E1D3 /* Utils.swift */,
 			);
 			path = SHFEILI;
 			sourceTree = "<group>";
@@ -346,10 +352,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				606BC3C8210DABC20024E1D3 /* RegisterViewController.swift in Sources */,
 				BAF605CD20F5B57D00127CC6 /* ViewController.swift in Sources */,
 				60577E1B20FDD6A100987326 /* MonitorViewController.swift in Sources */,
 				6088970B210CD47A004C59F0 /* ReportDetailViewController.swift in Sources */,
 				60AF88E52108784000FC5C0B /* MachineDetailViewController.swift in Sources */,
+				606BC3CA210DACB30024E1D3 /* Utils.swift in Sources */,
 				BAF605CB20F5B57D00127CC6 /* AppDelegate.swift in Sources */,
 				601A692521049A860006824C /* LoginViewController.swift in Sources */,
 				609765B12104F16E007E0B99 /* NetworkUtils.swift in Sources */,

@@ -66,7 +66,7 @@ def aborting(status_code, message):
 
 def create_password(password, username, power=False):
     red = get_redis()
-    if red.hexists('users', password):
+    if red.hexists('users', username):
         backend.app.logger.debug("User exists.")
         return False
     algorithm = 'sha512'

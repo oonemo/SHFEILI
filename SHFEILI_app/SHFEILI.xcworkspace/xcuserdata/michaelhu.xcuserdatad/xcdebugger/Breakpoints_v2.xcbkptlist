@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHFEILI/LoginViewController.swift"
-            timestampString = "554543518.633826"
+            timestampString = "554549827.361483"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "userLogin(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHFEILI/LoginViewController.swift"
-            timestampString = "554543518.633998"
+            timestampString = "554549827.361972"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "userLogin(_:)"
             landmarkType = "7">
             <Locations>
@@ -234,7 +234,39 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHFEILI/LoginViewController.swift"
-            timestampString = "554543518.6340491"
+            timestampString = "554549827.362215"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "userLogin(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SHFEILI/LoginViewController.swift"
+            timestampString = "554549827.3624949"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "userLogin(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SHFEILI/LoginViewController.swift"
+            timestampString = "554549827.362767"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
@@ -249,104 +281,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SHFEILI/LoginViewController.swift"
-            timestampString = "554543518.634095"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "userLogin(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SHFEILI/LoginViewController.swift"
-            timestampString = "554543518.6341389"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "userLogin(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SHFEILI/LoginViewController.swift"
-            timestampString = "554543518.634181"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "displayMessage(title:userMessage:view:handler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SHFEILI/LoginViewController.swift"
-            timestampString = "554543518.634223"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "displayMessage(title:userMessage:view:handler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SHFEILI/LoginViewController.swift"
-            timestampString = "554543518.63429"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "displayMessage(title:userMessage:view:handler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SHFEILI/LoginViewController.swift"
-            timestampString = "554543518.634349"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "displayMessage(title:userMessage:view:handler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "SHFEILI/NetworkUtils.swift"
-            timestampString = "554543518.634408"
+            timestampString = "554549827.363089"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
@@ -362,7 +298,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHFEILI/NetworkUtils.swift"
-            timestampString = "554543518.634524"
+            timestampString = "554549827.363155"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
@@ -378,7 +314,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHFEILI/NetworkUtils.swift"
-            timestampString = "554543518.634585"
+            timestampString = "554549827.36321"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
@@ -458,7 +394,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHFEILI/ReportViewController.swift"
-            timestampString = "554543518.6357991"
+            timestampString = "554549827.363327"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
@@ -474,7 +410,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHFEILI/ReportViewController.swift"
-            timestampString = "554543518.635874"
+            timestampString = "554549827.363404"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
@@ -522,7 +458,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHFEILI/ReportViewController.swift"
-            timestampString = "554543518.63594"
+            timestampString = "554549827.363471"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
@@ -570,7 +506,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHFEILI/ReportViewController.swift"
-            timestampString = "554543518.636005"
+            timestampString = "554549827.363537"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
@@ -618,7 +554,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHFEILI/ReportViewController.swift"
-            timestampString = "554543518.636066"
+            timestampString = "554549827.363601"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "46"
@@ -634,7 +570,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHFEILI/ReportViewController.swift"
-            timestampString = "554543518.6361279"
+            timestampString = "554549827.363665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "48"
@@ -650,7 +586,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHFEILI/ReportViewController.swift"
-            timestampString = "554543518.636191"
+            timestampString = "554549827.363731"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
@@ -666,7 +602,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHFEILI/ReportDetailViewController.swift"
-            timestampString = "554543518.6362571"
+            timestampString = "554549827.3638721"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -682,7 +618,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHFEILI/ReportDetailViewController.swift"
-            timestampString = "554543518.636557"
+            timestampString = "554549827.364397"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
@@ -698,7 +634,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHFEILI/ReportDetailViewController.swift"
-            timestampString = "554543518.6368051"
+            timestampString = "554549827.364871"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -714,7 +650,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHFEILI/ReportDetailViewController.swift"
-            timestampString = "554543518.637054"
+            timestampString = "554549827.36518"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
@@ -730,7 +666,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHFEILI/ReportDetailViewController.swift"
-            timestampString = "554543518.637321"
+            timestampString = "554549827.365464"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
@@ -746,7 +682,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHFEILI/ReportDetailViewController.swift"
-            timestampString = "554543518.637643"
+            timestampString = "554549827.365747"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
@@ -762,7 +698,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHFEILI/ReportViewController.swift"
-            timestampString = "554543518.637996"
+            timestampString = "554549827.366034"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -778,7 +714,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHFEILI/ReportViewController.swift"
-            timestampString = "554543518.638096"
+            timestampString = "554549827.366127"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -794,7 +730,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHFEILI/ReportViewController.swift"
-            timestampString = "554543518.638191"
+            timestampString = "554549827.366207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -810,7 +746,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHFEILI/ReportViewController.swift"
-            timestampString = "554543518.6383049"
+            timestampString = "554549827.3662879"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
@@ -826,7 +762,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHFEILI/ReportViewController.swift"
-            timestampString = "554543518.638399"
+            timestampString = "554549827.366406"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
@@ -874,7 +810,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHFEILI/ReportViewController.swift"
-            timestampString = "554543518.638489"
+            timestampString = "554549827.3664941"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
@@ -890,7 +826,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHFEILI/NetworkUtils.swift"
-            timestampString = "554543518.6385731"
+            timestampString = "554549827.366568"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "15"
@@ -906,7 +842,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHFEILI/NetworkUtils.swift"
-            timestampString = "554543518.6386369"
+            timestampString = "554549827.3666511"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -922,7 +858,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHFEILI/NetworkUtils.swift"
-            timestampString = "554543518.638693"
+            timestampString = "554549827.36673"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
@@ -961,6 +897,70 @@
             endingLineNumber = "22"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SHFEILI/RegisterViewController.swift"
+            timestampString = "554549827.3668391"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "createUser(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SHFEILI/RegisterViewController.swift"
+            timestampString = "554549827.367484"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "createUser(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SHFEILI.RegisterViewController.createUser(Any) -&gt; ()"
+                  moduleName = "SHFEILI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/michaelhu/Desktop/SHFEILI_TESTING/SHFEILI_app/SHFEILI/RegisterViewController.swift"
+                  timestampString = "554549827.5426331"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "3706">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__ObjC.NSDictionary&gt;) -&gt; () in SHFEILI.RegisterViewController.createUser(Any) -&gt; ()"
+                  moduleName = "SHFEILI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/michaelhu/Desktop/SHFEILI_TESTING/SHFEILI_app/SHFEILI/RegisterViewController.swift"
+                  timestampString = "554549827.544814"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

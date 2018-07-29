@@ -75,7 +75,6 @@ class ReportDetailViewController: UITableViewController {
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "reportCell") else {return UITableViewCell()}
-            cell.backgroundColor = UIColor.gray
             cell.textLabel?.text = tableViewData[indexPath.section].sectionData[indexPath.row - 1]
             return cell
         }

@@ -8,24 +8,23 @@ import json
 @backend.app.route('/api/create_user/', methods=["POST", "GET"])
 def create_user():
     context = {}
-    if 'username' not in session:
-        util.aborting("403", "Forbidden")
 
     if request.method == 'POST':
         data = json.loads(request.get_data().decode('utf-8'))
         password = data['password']
         username = data['username']
-        new_password = data['create_password']
+        new_password = data['new_password']
         new_username = data['new_username']
         is_power = check_password(password, username)[1]
-        power = request.form['user_type'] == 'power'
+        power = data['power'] == True
         if is_power:
             result = create_password(new_password, new_username, power)
             if result:
-                context['succeeded'] = False
-                context['reason'] = 'Error: user already exists!'
-            else:
                 context['succeeded'] = True
+                context['reason'] = 'Create Succeed!'
+            else:
+                context['succeeded'] = False
+                context['reason'] = 'User exists!'
         else:
             context['succeeded'] = False
             context['reason'] = 'Error: No admin rights!'
@@ -52,6 +51,9 @@ def login():
             context['is_user'] = True
             if is_power:
                 session['power_user'] = True
+                context['power_user'] = True
+            else:
+                context['power_user'] = False
         else:
             context['is_user'] = False
 
