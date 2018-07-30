@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var progressBar: UICircularProgressRing!
     
+    var work = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let isUserLoggedIn = UserDefaults.standard.bool(forKey: "isUserLoggedIn");
@@ -50,18 +52,27 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "showLogin", sender: self)
     }
     
-    func updateUI(totalScheduled: String, totalTested: String, working: Bool) {
+    func updateUI(totalScheduled: String, totalTested: String, working: Bool, completionHandler: (() -> Void)? = nil) {
         if (working) {
-            let s = Float(totalScheduled)
-            let t = Float(totalTested)
-            let value = Float(t!/s!)
-            print(value)
-            if progressBar.isAnimating {
-                progressBar.pauseProgress()
+            if (totalScheduled == "-1") {
+                if progressBar.isAnimating {
+                    progressBar.pauseProgress()
+                }
+                progressBar.startProgress(to: UICircularProgressRing.ProgressValue(100), duration: UICircularProgressRing.ProgressDuration(0.1))
+            } else {
+                let s = Float(totalScheduled)
+                let t = Float(totalTested)
+                let value = Float(t!/s!)
+                if progressBar.isAnimating {
+                    progressBar.pauseProgress()
+                }
+                progressBar.startProgress(to: UICircularProgressRing.ProgressValue(value * 100), duration: UICircularProgressRing.ProgressDuration(0.1))
             }
-            progressBar.startProgress(to: UICircularProgressRing.ProgressValue(value * 100), duration: UICircularProgressRing.ProgressDuration(0.4))
         } else {
             progressBar.value = 0
+        }
+        if (completionHandler != nil) {
+            completionHandler!()
         }
     }
     
@@ -71,11 +82,20 @@ class ViewController: UIViewController {
                 (dictionary) in
                 let working = dictionary?["working"] as! Bool
                 if (working) {
+                    self.work = true
                     let totalScheduled = dictionary?["totalScheduled"] as! String
                     let totalTested = dictionary?["totalTested"] as! String
-                    self.updateUI(totalScheduled: totalScheduled, totalTested: totalTested, working: true)
+                    self.updateUI(totalScheduled: totalScheduled, totalTested: totalTested,
+                                  working: true, completionHandler: nil)
                 } else {
-                    self.updateUI(totalScheduled: "0", totalTested: "0", working: false)
+                    if (self.work) {
+                        self.updateUI(totalScheduled: "-1", totalTested: "-1", working: true) {
+                            self.work = false
+                            Utils.displayMessage(title: "Finished", userMessage: "Running finished",
+                                                 view: self, handler: nil)
+                        }
+                    }
+                    self.updateUI(totalScheduled: "0", totalTested: "0", working: false, completionHandler: nil)
                 }
             }
         }
