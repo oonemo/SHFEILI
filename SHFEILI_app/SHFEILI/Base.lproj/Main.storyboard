@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i5e-iP-fX8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i5e-iP-fX8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14278.2"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,12 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Microswitch Testing Control System" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bef-Nu-Aa9">
-                                <rect key="frame" x="71" y="116" width="233.5" height="44"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFT-LM-QjP">
                                 <rect key="frame" x="113" y="416" width="149" height="34"/>
                                 <color key="backgroundColor" red="0.92021534974093266" green="0.87164487816040026" blue="0.61766353421263931" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -69,12 +63,6 @@
                                     <segue destination="Xf2-Uu-wnV" kind="show" id="MMi-Tr-4ov"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHFEILI" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Oh2-E5-hEA">
-                                <rect key="frame" x="143.5" y="90" width="88" height="29"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0Y-Qx-TR6">
                                 <rect key="frame" x="113" y="560" width="149" height="34"/>
                                 <color key="backgroundColor" red="0.50310651669427697" green="0.8074399241609137" blue="0.34177496901261256" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -90,6 +78,22 @@
                                     <action selector="logout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xgh-Z2-IuA"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fsO-TP-c5N" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
+                                <rect key="frame" x="67" y="141" width="240" height="267"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SHFEILI" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Oh2-E5-hEA">
+                                <rect key="frame" x="143" y="80" width="88" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Microswitch Testing Control System" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bef-Nu-Aa9">
+                                <rect key="frame" x="70" y="117" width="234" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -101,12 +105,16 @@
                             <constraint firstItem="bef-Nu-Aa9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="AOT-1I-dBn"/>
                             <constraint firstItem="fFT-LM-QjP" firstAttribute="top" secondItem="bef-Nu-Aa9" secondAttribute="bottom" constant="256" id="EhZ-88-oF9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v0Y-Qx-TR6" secondAttribute="trailing" constant="113" id="Kx9-OM-XzY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fsO-TP-c5N" secondAttribute="trailing" constant="68" id="NsF-wI-mYm"/>
+                            <constraint firstItem="fFT-LM-QjP" firstAttribute="top" secondItem="fsO-TP-c5N" secondAttribute="bottom" constant="22" id="Qex-Eo-em8"/>
                             <constraint firstItem="5cE-h8-bM2" firstAttribute="top" secondItem="fFT-LM-QjP" secondAttribute="bottom" constant="14" id="RqY-2c-P9N"/>
                             <constraint firstItem="v0Y-Qx-TR6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="113" id="Wtl-vv-KIU"/>
                             <constraint firstItem="fFT-LM-QjP" firstAttribute="top" secondItem="Oh2-E5-hEA" secondAttribute="bottom" constant="297" id="YEs-lf-MUe"/>
+                            <constraint firstItem="fsO-TP-c5N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="ax5-nL-eK3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fFT-LM-QjP" secondAttribute="trailing" constant="113" id="eRg-0E-T5r"/>
                             <constraint firstItem="Oh2-E5-hEA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="26" id="fuW-z8-yqY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5cE-h8-bM2" secondAttribute="trailing" constant="113" id="hDb-Wz-R4A"/>
+                            <constraint firstItem="fsO-TP-c5N" firstAttribute="top" secondItem="Oh2-E5-hEA" secondAttribute="bottom" constant="35" id="hrX-UD-J7G"/>
                             <constraint firstItem="KjX-xw-dEY" firstAttribute="top" secondItem="5cE-h8-bM2" secondAttribute="bottom" constant="14" id="iW9-31-857"/>
                             <constraint firstItem="5cE-h8-bM2" firstAttribute="top" secondItem="fFT-LM-QjP" secondAttribute="bottom" constant="14" id="isw-rQ-230"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KjX-xw-dEY" secondAttribute="trailing" constant="113" id="kbL-ig-XX8"/>
@@ -120,6 +128,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="vwJ-r6-bkv" customClass="Home"/>
                     <connections>
+                        <outlet property="progressBar" destination="fsO-TP-c5N" id="P6p-8K-Itj"/>
                         <segue destination="lxe-Yv-vHq" kind="presentation" identifier="showLogin" id="JdP-NY-QwU"/>
                     </connections>
                 </viewController>
@@ -674,7 +683,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iz3-yS-Atr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2583" y="-547"/>
+            <point key="canvasLocation" x="2581.5999999999999" y="-547.37631184407803"/>
         </scene>
     </scenes>
 </document>

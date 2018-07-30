@@ -76,6 +76,21 @@ def get_status():
                 context['working'] = 'False'
     return flask.jsonify(**context)
 
+@backend.app.route('/api/system_status_brief/', methods=["GET"])
+def get_status_brief():
+    if "username" not in flask.session:
+        util.aborting("403", "Forbidden")
+
+    context = {}
+    red = util.get_redis()
+    if red.get('working') == "true":
+        context['working'] = True
+        context['totalScheduled'] = red.get('totalScheduled')
+        context['totalTested'] = red.get('totalTested')
+    else:
+        context['working'] = False
+    return flask.jsonify(**context)
+
 
 @backend.app.route('/api/stop_testing/', methods=["POST"])
 def stop_testing():
