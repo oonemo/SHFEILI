@@ -103,9 +103,9 @@ def stop_testing():
     if red.get('working') == 'true' and 'power_user' in flask.session:
         red.set('working', 'false')
         context['stop'] = True
-        return flask.jsonify(**context)
     else:
-        util.aborting("403", "Forbidden")
+        context['stop'] = False
+    return flask.jsonify(**context)
 
 
 

@@ -42,6 +42,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func stopProgress(_ sender: Any) {
+        NetworkUtils.post(endpoint: "/api/stop_testing/", inputData:[:]) {
+            (dictionary) in
+            let stopped = dictionary?["stop"] as! Bool
+            if (stopped) {
+                Utils.displayMessage(title: "Success", userMessage: "Success stop testing", view: self, handler: nil)
+            } else {
+                Utils.displayMessage(title: "Error", userMessage: "Cannot stop testing, please check admin right and system status", view: self, handler: nil)
+            }
+        }
     }
     
     @IBAction func logout(_ sender: Any) {
