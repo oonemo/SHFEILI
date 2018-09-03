@@ -1,0 +1,11 @@
+#!/bin/bash
+# backend
+
+cd ~/Desktop/SHFEILI_TESTING/feili-micro-backend/
+. venv/bin/activate
+export FLASK_APP=backend
+export FLASK_DEBUG=True
+export BACKEND_SETTINGS=config.py
+flask run --host 127.0.0.1 --port 8000
+
+echo 'Running started'

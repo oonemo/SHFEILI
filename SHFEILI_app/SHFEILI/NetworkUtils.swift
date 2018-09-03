@@ -9,7 +9,7 @@
 import Foundation
 open class NetworkUtils {
     
-    static let serverBaseUrl = "http://10.167.171.144:8000"
+    static let serverBaseUrl = "http://10.167.170.94:8000"
     
     static func get(endpoint: String, completionHandler: ((NSDictionary?) -> Void)? = nil) {
         guard let url = URL(string: (serverBaseUrl + endpoint)) else {

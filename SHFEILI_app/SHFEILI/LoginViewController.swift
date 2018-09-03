@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     
 
@@ -17,7 +17,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();
-
+        inputPasswordTextField.delegate = self
+        inputUsernameTextField.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -53,6 +54,15 @@ class LoginViewController: UIViewController {
             }
         }
 
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
 

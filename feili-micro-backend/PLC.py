@@ -16,7 +16,7 @@ def working_and_generate(ss):
     red = util.get_redis()
     red.set('working', 'true')
     red.set('totalTested', 0)
-    red.set('totalScheduled', 100)
+    red.set('totalScheduled', 106)
     maxNumError = 10
     total_count = 0
     count = 0
@@ -33,6 +33,8 @@ def working_and_generate(ss):
         #TODO: PLC PART
         print("in loop")
         total_count = getCycle(ss)  # needed to be fixed later
+        if total_count >= 106:
+            break
         print("cycle:",total_count)
         red.set('totalTested', total_count)
         time.sleep(1)
@@ -49,7 +51,7 @@ def working_and_generate(ss):
     red.set('working', 'false')
     report = dict()
     report['totalTested'] = red.get('totalTested')
-    report['totalScheduled'] = 100
+    report['totalScheduled'] = red.get('totalScheduled')
     timeStamp = arrow.now().format('YYYY-MM-DD HH:mm:ss')
     red.rpush('reportsList', 'report ' + timeStamp)
     red.hmset('report ' + timeStamp, report) # could be trimmed
@@ -133,7 +135,7 @@ def getFailure(ser, switch):
     return cycle
 
 def serial_init():
-    ser = serial.Serial('/dev/tty.usbserial-A9080UAJ')  # open serial port
+    ser = serial.Serial('/dev/ttyUSB0')  # open serial port
     ser.baudrate = 115200
     return ser
 
@@ -150,7 +152,7 @@ def main():
     print("heihei")
 
     global ss
-    ss = serial.Serial('/dev/tty.usbserial-A9080UAJ')
+    ss = serial.Serial('/dev/ttyUSB0')
     ss.baudrate = 115200
     t1 = threading.Thread(target=working_and_generate, args=[ss])
     print("haha")
